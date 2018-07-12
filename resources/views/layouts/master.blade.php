@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app()->getLocale() }}">
    <head>
       <meta charset="utf-8">
       <meta name="apple-mobile-web-app-capable" content="yes" />
