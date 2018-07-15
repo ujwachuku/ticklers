@@ -24,7 +24,7 @@ Contact us
          <div class="row">
             <div class="col-md-6 col-md-offset-3 col-xs-12">
                <div class="main-caption text-center color-type-2">
-                  <h2 class="h2">Contact Us</h2>
+                  <h2 class="h2 title">Contact Us</h2>
                   <div class="empty-sm-5 empty-xs-5"></div>
                   <div class="simple-text md simple-sub-text">
                      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -293,8 +293,9 @@ Contact us
             </div>
          </div>
       </div>
+      <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
    </section>
-   <section class="section">
+   <!-- <section class="section">
       <div class="container">
          <div class="row">
             <div class="col-md-8 col-md-offset-2 col-xs-12">
@@ -352,7 +353,7 @@ Contact us
          </div>
       </div>
       <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
-   </section>
+   </section> -->
 </div>
 @endsection
 

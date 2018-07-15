@@ -149,7 +149,7 @@ div[class*="empty-"] {width: 100%; clear: both;}
 .fr {position: relative; float: right;}
 .fl {position: relative; float: left;}
 .full-h {height: 100%; position: relative;}
-.full-height-slider {height: 100vmin; min-height: 550px; position: relative; width: 100%;}
+.full-height-slider {height: 25vmin; min-height: 350px; position: relative; width: 100%;}
 .full-height-slider.type-1{max-height: 770px;}
 .text-center {text-align: center;}
 .text-left {text-align: left;}

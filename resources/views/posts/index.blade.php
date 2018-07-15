@@ -11,7 +11,7 @@ Latest updates from Ticklers
 @section('content')
 <div class="main-content">
    <section class="full-height-slider type-1">
-      <div class="bg ready data-jarallax" data-jarallax="5" style="background-image: url(img/blog/main-baner-bg.jpg)" data-swiper-parallax="50%"></div>
+      <div class="bg ready data-jarallax" data-jarallax="5" style="background-image: url(img/ticklers-news.jpg)" data-swiper-parallax="50%"></div>
       <div class="table-view mobile-rel-block">
          <div class="table-cell">
             <div class="container no-padd">
@@ -19,11 +19,11 @@ Latest updates from Ticklers
                   <div class="col-md-6 col-md-offset-3 col-sm-12 col-sm-offset-0">
                      <div class="simple-item color-type-1 text-center">
                         <div class="main-title">
-                           <h1 class="h1 caption">Our Blog</h1>
+                           <h2 class="h2 title">Ticklers News</h2>
                            <div class="empty-sm-30"></div>
                            <div class="col-md-10 col-md-offset-1">
                               <div class="simple-text md">
-                                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                 <p style="color: #fff;"><b>Get the latest updates about Ticklers Quick Service restaurant from our news section.</b></p>
                               </div>
                            </div>
                         </div>

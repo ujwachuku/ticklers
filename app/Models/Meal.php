@@ -17,6 +17,11 @@ class Meal extends Model
     	'is_published'
     ];
 
+    public function getRouteKeyname()
+    {
+        return 'slug';
+    }
+
     public function user()
     {
     	return $this->belongsTo(User::class);
@@ -25,5 +30,11 @@ class Meal extends Model
     public function mealCategory()
     {
     	return $this->belongsTo(MealCategory::class);
+    }
+
+    public function presentPrice()
+    {
+        $price = 'N'.$this->price;
+        return $price;
     }
 }

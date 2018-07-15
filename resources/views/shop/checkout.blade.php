@@ -19,7 +19,7 @@ Checkout
                   <div class="col-lg-6 col-lg-offset-3 col-sm-12 col-sm-offset-0">
                      <div class="simple-item color-type-1 text-center">
                         <div class="main-title">
-                           <h1 class="h1 caption">Checkout</h1>
+                           <h2 class="h2 title">Checkout</h2>
                            <div class="empty-sm-30"></div>
                            <div class="col-md-10 col-md-offset-1">
                               <div class="simple-text md">
@@ -42,7 +42,7 @@ Checkout
             <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
                <div class="simple-item color-type-2 text-center">
                   <div class="main-title">
-                     <h1 class="h1 color-2">Checkout</h1>
+                     <h2 class="h2 title">Checkout</h2>
                      <div class="empty-sm-25"></div>
                      <div class="col-md-10 col-md-offset-1">
                         <div class="simple-text md opacity-1">

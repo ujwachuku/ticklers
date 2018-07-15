@@ -23,6 +23,7 @@ class CreateMealsTable extends Migration
             $table->unsignedInteger('meal_category_id');
             $table->unsignedInteger('user_id');
             $table->boolean('is_published')->default(false);
+            $table->boolean('is_featured')->default(false);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

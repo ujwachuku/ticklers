@@ -2,12 +2,12 @@
    <div class="empty-sm-60 empty-xs-40"></div>
    <div class="container">
       <div class="row">
-         <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="footer-item">
-               <img src="img/logo.png" alt="">
+               <img src="img/logo.png" alt="{{ config('app.name') }}">
                <div class="empty-sm-15 empty-xs-15"></div>
                <div class="simple-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <p style="color: #fff;">Ticklers Quick Service Restaurant is a high quality restaurant situated in Shangisha- Lagos. We pride ourselves on making high quality meals of different types and tastes.</p>
                </div>
                <div class="empty-sm-20 empty-xs-20"></div>
                <ul class="list-style-2 ul-list">
@@ -16,6 +16,7 @@
                   <li><span>Email: </span><a href="mailto:" class="link-hover">delice.info@mail.com</a></li>
                </ul>
                <div class="empty-sm-30 empty-xs-30"></div>
+               <!-- Social buttons -->
                <div class="follow follow-style-2 sm">
                   <a href="#">
                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve" width="16px" height="16px">
@@ -89,34 +90,16 @@
                <div class="empty-sm-30 empty-xs-30"></div>
             </div>
          </div>
-         <div class="col-md-4 col-sm-3 col-xs-6">
+         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="footer-item">
                <h5 class="h5">quick links</h5>
                <div class="empty-sm-15 empty-xs-15"></div>
                <ul class="list-style-3 ul-list">
-                  <li><a href="#" class="link-hover">HOME</a></li>
-                  <li><a href="#" class="link-hover">ABOUT</a></li>
-                  <li><a href="#" class="link-hover">MENU</a></li>
-                  <li><a href="#" class="link-hover">PAGES</a></li>
-                  <li><a href="#" class="link-hover">BLOG</a></li>
-                  <li><a href="#" class="link-hover">CONTACT</a></li>
-                  <li><a href="#" class="link-hover">RESERVATION</a></li>
-               </ul>
-               <div class="empty-sm-30 empty-xs-30"></div>
-            </div>
-         </div>
-         <div class="col-md-4 col-sm-3 col-xs-6">
-            <div class="footer-item">
-               <h5 class="h5">Menu categories</h5>
-               <div class="empty-sm-15 empty-xs-15"></div>
-               <ul class="list-style-3 ul-list">
-                  <li><a href="#" class="link-hover">PIZZA</a></li>
-                  <li><a href="#" class="link-hover">STARTERS AND SIDES</a></li>
-                  <li><a href="#" class="link-hover">PASTA AND MAINS</a></li>
-                  <li><a href="#" class="link-hover">DESSERTS</a></li>
-                  <li><a href="#" class="link-hover">SALAD</a></li>
-                  <li><a href="#" class="link-hover">DRINKS</a></li>
-                  <li><a href="#" class="link-hover">EXCLUSIVE OFFES</a></li>
+                  <li><a href="/" class="link-hover">Home</a></li>
+                  <li><a href="{{ route('shop.index') }}" class="link-hover">Meals</a></li>
+                  <li><a href="#" class="link-hover">News</a></li>
+                  <li><a href="{{ route('about') }}" class="link-hover">About</a></li>
+                  <li><a href="{{ route('contact') }}" class="link-hover">Contact</a></li>                  
                </ul>
                <div class="empty-sm-30 empty-xs-30"></div>
             </div>
@@ -127,7 +110,7 @@
    <div class="copyright text-center">
       <div class="empty-sm-20 empty-xs-20"></div>
       <div class="container">
-         <span>© 2017 All Rights Reserved. Development by <a href="#">UnionAgency</a></span>
+         <span>© {{ date('Y') }} All Rights Reserved. Allied Thrust and Systems Nigeria Limited <span class="pull-right">Powered by <a href="https://tekkadanholding.com" target="_blank">Tekkadan</a></span></span>
       </div>
       <div class="empty-sm-20 empty-xs-20"></div>
    </div>

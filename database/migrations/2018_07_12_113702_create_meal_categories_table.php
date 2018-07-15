@@ -19,6 +19,7 @@ class CreateMealCategoriesTable extends Migration
             $table->string('slug')->unique();
             $table->text('meal_category_description')->nullable();
             $table->string('meal_category_image')->nullable();
+            $table->boolean('is_featured')->default(false);
             $table->unsignedInteger('user_id');
             $table->timestamps();
 

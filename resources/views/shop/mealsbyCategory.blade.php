@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('title')
-All of our meals and drinks
+{{ $meals->meal_category_name }} Meals
 @endsection
 
 @section('styles')
-	
+   
 @endsection
 
 @section('content')
@@ -19,11 +19,11 @@ All of our meals and drinks
                   <div class="col-lg-6 col-lg-offset-3 col-sm-12 col-sm-offset-0">
                      <div class="simple-item color-type-1 text-center">
                         <div class="main-title">
-                           <h2 class="h2 title">Ticklers Menu</h2>
+                           <h2 class="h2 title">{{ $meals->meal_category_name }} Meals</h2>
                            <div class="empty-sm-30"></div>
                            <div class="col-md-10 col-md-offset-1">
                               <div class="simple-text md">
-                                 <p style="color: #fff; font-weight: bold">Ticklers offers a wide range of meals and drinks for your pleasure. Order a meal and have it delivered to you.</p>
+                                 <p style="color: #fff; font-weight: bold">Ticklers offers a wide range of {{ $meals->meal_category_name }} meals and drinks for your pleasure. Order a meal and have it delivered to you.</p>
                               </div>
                            </div>
                         </div>
@@ -40,8 +40,8 @@ All of our meals and drinks
          <div class="row">
             <div class="col-lg-2 col-md-3 col-xs-12">
                <aside>
-                  <form action="" class="search-form type-2">
-                     <input type="text" name="q"placeholder="Search for..." class="input-search">
+                  <form action="#" class="search-form type-2">
+                     <input type="text" placeholder="Search for..." class="input-search" required="">
                      <div class="submit-search">
                         <input type="submit" value="">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="14px" height="14px">
@@ -104,7 +104,7 @@ All of our meals and drinks
                      <div class="empty-sm-20 empty-xs-10"></div>
                      <ul class="list-style-4 type-2 ul-list">
                         @foreach($categories as $category)
-                        <li><a href="{{ route('shop.meal.category', $category->slug) }}" class="link-hover">{{ $category->meal_category_name }}</a></li>
+                        <li><a href="{{ route('shop.meal.category',$category->slug) }}" class="link-hover">{{ $category->meal_category_name }}</a></li>
                         @endforeach
                      </ul>
                   </aside>                                    
@@ -115,18 +115,17 @@ All of our meals and drinks
                <div class="row">
                   <div class="col-md-12 col-xs-12">
                      <div class="shop-filter">
-                        @if($search === true)
                         <div class="found-items">
                            <div class="simple-text">
-                              <p>Found <span class="main-col"><b>{{ count($meals) }}</b></span> {{ count($meals) === 1 ? 'item' : 'items' }}</p>
+                              <p>Found <span class="main-col"><b>{{ count($meals->meal) }}</b></span> {{ count($meals->meal) === 1 ? 'item' : 'items' }}</p>
                            </div>
                         </div>
-                        @endif
                      </div>
                   </div>
                </div>
                <div class="row row-4-columns row-3-columns row-2-columns">
-                  @foreach($meals as $meal)
+                  @if(count($meals->meal) > 0)
+                  @foreach($meals->meal as $meal)
                   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                      <div class="empty-sm-60 empty-xs-50"></div>
                      <div class="menu-item menu-item-2 type-2">
@@ -147,13 +146,31 @@ All of our meals and drinks
                         </div>
                         <div class="text">
                            <div class="empty-sm-20 empty-xs-20"></div>
-                           <h5 class="h5 caption"><a href="{{ route('shop.meal', $meal->slug) }}" class="link-hover-line">{{ $meal->meal_name }}</a></h5>
+                           <h5 class="h5 caption"><a href="#" class="link-hover-line">{{ $meal->meal_name }}</a></h5>
                            <div class="empty-sm-10 empty-xs-10"></div>
                            <div class="menu-price style-2 main-col">{{ $meal->presentPrice() }}</div>
                         </div>
                      </div>
                   </div>
-                  @endforeach                  
+                  @endforeach
+                  @else
+                  <div class="row">
+                     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+                        <div class="simple-item color-type-2 text-center">
+                           <div class="main-title">                              
+                              <h2 class="h2 title">There are no meals in this category</h2>
+                              <div class="empty-sm-25"></div>
+                              <div class="col-md-10 col-md-offset-1">
+                                 <div class="simple-text md opacity-1">
+                                    <p>Please go back to the <a href="{{ route('shop.index') }}">shop</a> to order your first item...</p>
+                                 </div>
+                              </div>                     
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="empty-lg-70 empty-md-50 empty-sm-40 empty-xs-30"></div>
+                  @endif                 
                </div>
                <div class="empty-lg-70 empty-md-50 empty-sm-40 empty-xs-30"></div>               
             </div>
@@ -164,5 +181,5 @@ All of our meals and drinks
 @endsection
 
 @section('scripts')
-	
+   
 @endsection
