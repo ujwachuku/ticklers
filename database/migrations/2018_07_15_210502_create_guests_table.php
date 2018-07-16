@@ -25,7 +25,7 @@ class CreateGuestsTable extends Migration
             $table->string('instructions')->nullable();
             $table->timestamps();
 
-            $table->foreign('cart_row_id')->references('row_id')->on('carts')->onDelete('cascade');
+            // $table->foreign('cart_row_id')->references('row_id')->on('carts')->onDelete('cascade');
         });
     }
 

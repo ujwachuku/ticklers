@@ -22,7 +22,7 @@ class CreateOrdersTable extends Migration
             $table->boolean('is_fulfilled')->default(false);
             $table->timestamps();
 
-            $table->foreign('guest_id')->references('id')->on('guests')->onDelete('cascade');
+            // $table->foreign('guest_id')->references('id')->on('guests')->onDelete('cascade');
         });
     }
 

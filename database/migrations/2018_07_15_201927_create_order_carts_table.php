@@ -20,7 +20,7 @@ class CreateOrderCartsTable extends Migration
             $table->unsignedInteger('qty');
             $table->timestamps();
 
-            $table->foreign('meal_id')->references('id')->on('meals')->onDelete('cascade');
+            // $table->foreign('meal_id')->references('id')->on('meals')->onDelete('cascade');
         });
     }
 
