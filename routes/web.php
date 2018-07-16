@@ -17,6 +17,6 @@ Route::post('order/store', 'OrderController@store')->name('order.store');
 Route::get('thank-you', 'PageController@thanks')->name('shop.thanks');
 
 Route::get('news', 'PostController@index')->name('posts.index');
-Route::view('news/post', 'posts.post');
+// Route::get('news/post', 'posts.post');
 // Auth::routes();
 
