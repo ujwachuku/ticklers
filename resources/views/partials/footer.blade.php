@@ -11,7 +11,7 @@
                </div>
                <div class="empty-sm-20 empty-xs-20"></div>
                <ul class="list-style-2 ul-list">
-                  <li><span>Address: </span>CMD Guest, Shangisha, Magodo - Lagos.</li>
+                  <li><span>Address: </span>Funplex Resort, beside Center for Management Development, CMD Road, Shangisha, Lagos</li>
                   <li><span>Phone: </span><a href="tel:" class="link-hover">+234 806 406 0386</a></li>
                   <li><span>Email: </span><a href="mailto:" class="link-hover">info[at]ticklers[dot]com</a></li>
                </ul>

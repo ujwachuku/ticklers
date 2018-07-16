@@ -144,7 +144,7 @@ Contact us
                   <h4 class="h4 tt color-type-1">Find us</h4>
                   <div class="empty-sm-20 empty-xs-10"></div>
                   <div class="simple-text">
-                     <p>CMD Guest House, Shangisha, Magodo - Lagos</p>
+                     <p>Funplex Resort, beside Center for Management Development, CMD Road, Shangisha, Lagos</p>
                   </div>
                </div>
             </div>

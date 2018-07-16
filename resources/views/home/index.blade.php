@@ -206,7 +206,7 @@ The best food in Lagos
                   <div class="empty-lg-70 empty-md-60 empty-sm-60 empty-xs-40"></div>
                   <ul class="list-style-2 ul-list">
                      <li>
-                        <span><b>Address:</b> CMD Guest House, Shangisha, Magodo - Lagos</span>
+                        <span><b>Address:</b> Funplex Resort, beside Center for Management Development, CMD Road, Shangisha, Lagos</span>
                      </li>
                      <li>
                         <span><b>Phone:</b><a href="tel:" class="link-hover">+234 806 406 0386</a></span>
