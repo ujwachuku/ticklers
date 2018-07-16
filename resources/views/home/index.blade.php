@@ -201,36 +201,30 @@ The best food in Lagos
                   <img src="/img/title_sepp_3.png" alt="" class="color-overlay">
                   <div class="empty-sm-15 empty-xs-15"></div>
                   <div class="simple-text md">
-                     <p><b>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</b></p>
+                     <p><b>Please feel free to get in touch with us. We look forward to hearing from you.</b></p>
                   </div>
                   <div class="empty-lg-70 empty-md-60 empty-sm-60 empty-xs-40"></div>
                   <ul class="list-style-2 ul-list">
                      <li>
-                        <span><b>Address:</b> 150 Duffy Ave, Hicksville, NY 11801, USA</span>
+                        <span><b>Address:</b> CMD Guest House, Shangisha, Magodo - Lagos</span>
                      </li>
                      <li>
-                        <span><b>Phone:</b><a href="tel:" class="link-hover">+38 056 23 15 7851</a></span>
+                        <span><b>Phone:</b><a href="tel:" class="link-hover">+234 806 406 0386</a></span>
                      </li>
                   </ul>
                   <div class="empty-sm-40 empty-xs-30"></div>
                   <div class="row">
                      <div class="col-md-8 col-md-offset-2">
-                        <h4 class="h4 tt caption">working time</h4>
+                        <h4 class="h4 tt caption">working hours</h4>
                         <div class="empty-sm-10 empty-xs-10"></div>
                         <div class="simple-text">
-                           <p>Ut enimex ea ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                           <p></p>
                         </div>
                         <div class="empty-sm-15 empty-xs-15"></div>
                         <ul class="list-style-1 ul-list">
                            <li>
-                              <div class="flex-wrap"><span>Monday  -  Friday</span><i></i><b>09:00 - 23:00</b></div>
-                           </li>
-                           <li>
-                              <div class="flex-wrap"><span>Saturday</span><i></i><b>11:00 - 01:00</b></div>
-                           </li>
-                           <li>
-                              <div class="flex-wrap"><span>Sunday</span><i></i><b>12:00 - 23:00</b></div>
-                           </li>
+                              <div class="flex-wrap"><span>All week</span><i></i><b>09:00 - 23:00</b></div>
+                           </li>                           
                         </ul>
                      </div>
                   </div>
@@ -242,9 +236,9 @@ The best food in Lagos
    </section>
    <section class="section">
       <div class="map-item">
-         <div class="map-wrapper map-full" id="map-canvas" data-lat="48.8372768" data-lng="2.2393405" data-zoom="14" data-marker="/img/marker.png" data-style="1"></div>
+         <div class="map-wrapper map-full" id="map-canvas" data-lat="6.614789" data-lng="3.369949" data-zoom="14" data-marker="/img/marker.png" data-style="1"></div>
          <div class="markers-wrapper addresses-block">
-            <a class="marker" data-rel="map-canvas" data-lat="48.8372768" data-lng="2.2393405" data-string=""></a>
+            <a class="marker" data-rel="map-canvas" data-lat="6.614789" data-lng="3.369949" data-string=""></a>
          </div>
       </div>
    </section>

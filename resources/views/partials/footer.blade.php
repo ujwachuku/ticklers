@@ -11,9 +11,9 @@
                </div>
                <div class="empty-sm-20 empty-xs-20"></div>
                <ul class="list-style-2 ul-list">
-                  <li><span>Address: </span>150 Duffy Ave, Hicksville, NY 11801, USA</li>
-                  <li><span>Phone: </span><a href="tel:" class="link-hover">+38 056 23 15 7851</a></li>
-                  <li><span>Email: </span><a href="mailto:" class="link-hover">delice.info@mail.com</a></li>
+                  <li><span>Address: </span>CMD Guest, Shangisha, Magodo - Lagos.</li>
+                  <li><span>Phone: </span><a href="tel:" class="link-hover">+234 806 406 0386</a></li>
+                  <li><span>Email: </span><a href="mailto:" class="link-hover">info[at]ticklers[dot]com</a></li>
                </ul>
                <div class="empty-sm-30 empty-xs-30"></div>
                <!-- Social buttons -->

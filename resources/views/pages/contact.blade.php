@@ -12,9 +12,9 @@ Contact us
 <div class="main-content">
    <section class="section">
       <div class="map-item size-2">
-         <div class="map-wrapper map-full" id="map-canvas" data-lat="48.8372768" data-lng="2.2393405" data-zoom="14" data-marker="/img/marker.png" data-style="1"></div>
+         <div class="map-wrapper map-full" id="map-canvas" data-lat="6.614789" data-lng="3.369949" data-zoom="14" data-marker="/img/marker.png" data-style="1"></div>
          <div class="markers-wrapper addresses-block">
-            <a class="marker" data-rel="map-canvas" data-lat="48.8372768" data-lng="2.2393405" data-string=''></a>
+            <a class="marker" data-rel="map-canvas" data-lat="6.614789" data-lng="3.369949" data-string=''></a>
          </div>
       </div>
    </section>
@@ -27,7 +27,7 @@ Contact us
                   <h2 class="h2 title">Contact Us</h2>
                   <div class="empty-sm-5 empty-xs-5"></div>
                   <div class="simple-text md simple-sub-text">
-                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                     <p>Please feel free to get in touch with us. We look forward to hearing from you.</p>
                   </div>
                </div>
             </div>
@@ -36,22 +36,16 @@ Contact us
             <div class="col-md-4 col-md-offset-4 col-xs-12">
                <div class="empty-sm-70 empty-xs-30"></div>
                <div class="text-center color-type-2">
-                  <h4 class="h4 tt color-type-1">working time</h4>
+                  <h4 class="h4 tt color-type-1">working hours</h4>
                   <div class="empty-sm-10 empty-xs-10"></div>
                   <div class="simple-text">
-                     <p>Ut enimex ea ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                     <p></p>
                   </div>
                   <div class="empty-sm-20 empty-xs-10"></div>
                   <ul class="list-style-1 ul-list">
                      <li>
-                        <div class="flex-wrap"><span>Monday  -  Friday</span><i></i><b>09:00 - 23:00</b></div>
-                     </li>
-                     <li>
-                        <div class="flex-wrap"><span>Saturday</span><i></i><b>11:00 - 01:00</b></div>
-                     </li>
-                     <li>
-                        <div class="flex-wrap"><span>Sunday</span><i></i><b>12:00 - 23:00</b></div>
-                     </li>
+                        <div class="flex-wrap"><span>All Week</span><i></i><b>09:00 - 23:00</b></div>
+                     </li>                     
                   </ul>
                </div>
             </div>
@@ -105,7 +99,7 @@ Contact us
                   <h4 class="h4 tt color-type-1">Call us</h4>
                   <div class="empty-sm-20 empty-xs-10"></div>
                   <div class="simple-text contact">
-                     <a href="tel:3805623157851" class="link-hover">+38 056 23 15 7851</a>
+                     <a href="tel:3805623157851" class="link-hover">+234 806 406 0386</a>
                   </div>
                </div>
             </div>
@@ -147,10 +141,10 @@ Contact us
                      </svg>
                   </div>
                   <div class="empty-sm-15 empty-xs-10"></div>
-                  <h4 class="h4 tt color-type-1">FIND us</h4>
+                  <h4 class="h4 tt color-type-1">Find us</h4>
                   <div class="empty-sm-20 empty-xs-10"></div>
                   <div class="simple-text">
-                     <p>150 Duffy Ave, Hicksville, NY 11801, USA</p>
+                     <p>CMD Guest House, Shangisha, Magodo - Lagos</p>
                   </div>
                </div>
             </div>
@@ -174,10 +168,10 @@ Contact us
                      </svg>
                   </div>
                   <div class="empty-sm-15 empty-xs-10"></div>
-                  <h4 class="h4 tt color-type-1">MAIL us</h4>
+                  <h4 class="h4 tt color-type-1">Mail us</h4>
                   <div class="empty-sm-20 empty-xs-10"></div>
                   <div class="simple-text contact">
-                     <a href="mailto:delice.info@mail.com" class="link-hover">delice.info@mail.com</a>
+                     <a href="mailto:delice.info@mail.com" class="link-hover">info[at]ticklers[dot]com</a>
                   </div>
                </div>
             </div>
@@ -294,66 +288,7 @@ Contact us
          </div>
       </div>
       <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
-   </section>
-   <!-- <section class="section">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-xs-12">
-               <div class="empty-sm-70 empty-xs-30"></div>
-               <div class="text-center color-type-2">
-                  <h4 class="h4 tt color-type-1">Please, feel yourself comfortable to fill in our contact form</h4>
-               </div>
-               <div class="empty-sm-45 empty-xs-30"></div>
-               <form action="/" onsubmit="return MessageForm3();" method="post" id="messageForm3">
-                  <div class="row">
-                     <div class="col-sm-6 col-xs-12">
-                        <div class="input-field-wrap">
-                           <input type="text" class="input-field" placeholder="First Name *" name="first_name" required="">
-                           <div class="focus"></div>
-                        </div>
-                        <div class="empty-sm-20 empty-xs-20"></div>
-                     </div>
-                     <div class="col-sm-6 col-xs-12">
-                        <div class="input-field-wrap">
-                           <input type="text" class="input-field" placeholder="Last Name" name="last_name">
-                           <div class="focus"></div>
-                        </div>
-                        <div class="empty-sm-20 empty-xs-20"></div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-sm-6 col-xs-12">
-                        <div class="input-field-wrap">
-                           <input type="email" class="input-field" name="email" placeholder="Email *" name="email" required=""> 
-                           <div class="focus"></div>
-                        </div>
-                        <div class="empty-sm-20 empty-xs-20"></div>
-                     </div>
-                     <div class="col-sm-6 col-xs-12">
-                        <div class="input-field-wrap">
-                           <input type="text" class="input-field" placeholder="Subject" name="subject"> 
-                           <div class="focus"></div>
-                        </div>
-                        <div class="empty-sm-20 empty-xs-20"></div>
-                     </div>
-                  </div>
-                  <div class="input-field-wrap">
-                     <textarea placeholder="Message *" class="input-field" name="message" required=""></textarea>
-                     <div class="focus"></div>
-                  </div>
-                  <div class="empty-sm-30 empty-xs-30"></div>
-                  <div class="text-center">
-                     <div class="page-button button-style-1 type-2">
-                        <input type="submit">
-                        <span class="txt">SUBMIT</span><i></i>
-                     </div>
-                  </div>
-               </form>
-            </div>
-         </div>
-      </div>
-      <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
-   </section> -->
+   </section>   
 </div>
 @endsection
 
