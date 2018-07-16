@@ -12,10 +12,11 @@ Route::get('cart', 'CartController@index')->name('shop.cart');
 Route::post('cart', 'CartController@store')->name('shop.cart.store');
 Route::post('cart/empty', 'CartController@destroy')->name('shop.cart.destroy');
 
+Route::post('order/store', 'OrderController@store')->name('order.store');
 
-Route::view('checkout', 'shop.checkout');
-Route::view('thank-you', 'shop.thanks');
-Route::view('news', 'posts.index');
+Route::get('thank-you', 'PageController@thanks')->name('shop.thanks');
+
+Route::get('news', 'PostController@index')->name('posts.index');
 Route::view('news/post', 'posts.post');
 // Auth::routes();
 

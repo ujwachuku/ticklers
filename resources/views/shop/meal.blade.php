@@ -73,7 +73,7 @@
                         <input type="hidden" name="name" value="{{ $meal->meal_name }}">
                         <input type="hidden" name="price" value="{{ $meal->price }}">
                         <button class="page-button button-style-1 type-2"><span class="txt">Add to cart</span></button>
-                        <a href="{{ route('shop.index') }}" class="page-button button-style-1 type-2"><span class="txt">back to shop</span></a>                     
+                        <a href="{{ route('shop.index') }}" class="page-button button-style-1 type-2"><span class="txt">back to meals</span></a>                     
                      </div>
                   </form>
                </aside>

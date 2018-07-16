@@ -2109,6 +2109,36 @@ transition: all 0.35s ease-out; }
 .badge-inverse:hover {
   background-color: #1a1a1a;
 }
+.alert-success {
+	padding: 15px; 
+	color: #fff;
+	background: #58D68D; 
+	border: 1px solid #58D68D;
+}
+.alert-warning {
+	padding: 15px;
+	color: #fff; 
+	background: #F2AC40; 
+	border: 1px solid #F2AC40;
+}
+.alert-danger {
+	padding: 15px; 
+	background: #E54237; 
+	border: 1px solid #E54237;
+}
+
+.table {
+	width: 100%;	
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: #C0C0C0;
+}
 
 
 

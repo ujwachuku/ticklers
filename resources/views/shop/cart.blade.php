@@ -16,7 +16,20 @@ Your cart
          <div class="table-cell">
             <div class="container no-padd">
                <div class="row vertical-wrap">
-                  <div class="col-lg-6 col-lg-offset-3 col-sm-12 col-sm-offset-0">                     
+                  <div class="col-lg-6 col-lg-offset-3 col-sm-12 col-sm-offset-0">
+                     @if(Cart::count() > 0)
+                     <div class="simple-item color-type-1 text-center">
+                        <div class="main-title">
+                           <h2 class="h2 title">Your Cart</h2>
+                           <div class="empty-sm-30"></div>
+                           <div class="col-md-10 col-md-offset-1">
+                              <div class="simple-text md">
+                                 <p style="color: #fff; font-weight: bold;">The summary of your cart items is in the table below. Please feel free to checkout if you are satisfied with the cart summary</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     @endif                     
                   </div>
                </div>
             </div>
@@ -24,27 +37,19 @@ Your cart
       </div>
    </section>
    <section class="section">
-      <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
+      <!-- <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div> -->
       <div class="empty-lg-50 empty-md-20 empty-sm-10 empty-xs-10"></div>
       <div class="container">
          <div class="row">
             <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
                <div class="simple-item color-type-2 text-center">
                   <div class="main-title">
-                     @if(Cart::count() > 0)
-                     <h2 class="h2 title">Your Cart</h2>
-                     <div class="empty-sm-25"></div>
-                     <div class="col-md-10 col-md-offset-1">
-                        <div class="simple-text md opacity-1">
-                           <p>The summary of your cart items is in the table below. Please feel free to checkout if you are satisfied with the cart summary or you can <a href="{{ route('shop.index') }}">continue shopping</a></p>
-                        </div>
-                     </div>
-                     @else
+                     @if(Cart::count() == 0)                     
                      <h2 class="h2 title">Your Cart is empty</h2>
                      <div class="empty-sm-25"></div>
                      <div class="col-md-10 col-md-offset-1">
                         <div class="simple-text md opacity-1">
-                           <p>Your cart is empty. Please go back to the <a href="{{ route('shop.index') }}">shop</a> to order your first item...</p>
+                           <p>Your cart is empty. Please go back to the <a href="{{ route('shop.index') }}">Ticklers menu</a> to order your first meal...</p>
                         </div>
                      </div>
                      @endif                     
@@ -58,7 +63,8 @@ Your cart
       <div class="container">
          @if(Cart::count() > 0)
          <div class="row">
-            <div class="col-md-5 col-xs-12">
+            @include('inc.messages')
+            <div class="col-md-5 col-xs-12">               
                <div class="empty-sm-60 empty-xs-30"></div>
                <div class="text-left check-subtitle">
                   <h4 class="h4 sm color-2">Your Order</h4>
@@ -107,7 +113,7 @@ Your cart
                <div class="col-md-12" style="display: inline;">                  
                   <form action="{{ route('shop.cart.destroy') }}" method="POST">
                      @csrf
-                     <a href="{{ route('shop.index') }}" class="page-button md button-style-1 type-4"><span class="txt">continue shopping</span></a>
+                     <a href="{{ route('shop.index') }}" class="page-button md button-style-1 type-4"><span class="txt">back to meals</span></a>
                      <button class="page-button md button-style-1 type-4 pull-right"><span class="txt">empty cart</span></button>
                   </form>
                </div>
@@ -116,20 +122,25 @@ Your cart
                <div class="empty-sm-60 empty-xs-30"></div>
                <div class="text-left check-subtitle">
                   <h4 class="h4 sm color-2">Your Info</h4>
+                  <br>
+                  <div class="simple-text md opacity-1">
+                     <p>Please fill in the following fields to complete your order.</p>
+                  </div>
                </div>
                <div class="empty-sm-40 empty-xs-20"></div>
-               <form action="#">
+               <form action="{{ route('order.store') }}" method="POST">
+                  @csrf
                   <div class="row">
                      <div class="col-sm-6 col-xs-12">
                         <div class="input-field-wrap">
-                           <input type="text" class="input-field color-2" placeholder="First Name *" required>
+                           <input type="text" name="first_name" class="input-field color-2" placeholder="First Name *" required>
                            <div class="focus"></div>
                         </div>
                         <div class="empty-sm-20 empty-xs-20"></div>
                      </div>
                      <div class="col-sm-6 col-xs-12">
                         <div class="input-field-wrap">
-                           <input type="text" class="input-field color-2" placeholder="Last Name">
+                           <input type="text" name="last_name" class="input-field color-2" placeholder="Last Name">
                            <div class="focus"></div>
                         </div>
                         <div class="empty-sm-20 empty-xs-20"></div>
@@ -138,14 +149,14 @@ Your cart
                   <div class="row">
                      <div class="col-sm-6 col-xs-12">
                         <div class="input-field-wrap">
-                           <input type="email" class="input-field color-2" placeholder="Email *" required> 
+                           <input type="email" name="email" class="input-field color-2" placeholder="Email *" required> 
                            <div class="focus"></div>
                         </div>
                         <div class="empty-sm-20 empty-xs-20"></div>
                      </div>
                      <div class="col-sm-6 col-xs-12">
                         <div class="input-field-wrap">
-                           <input type="email" class="input-field color-2" placeholder="Phone *" required> 
+                           <input type="text" name="phone" class="input-field color-2" placeholder="Phone *" required> 
                            <div class="focus"></div>
                         </div>
                         <div class="empty-sm-20 empty-xs-20"></div>
@@ -154,7 +165,7 @@ Your cart
                   <div class="row">
                      <div class="col-sm-12 col-xs-12">
                         <div class="input-field-wrap">
-                           <input type="email" class="input-field color-2" placeholder="Address *" required> 
+                           <input type="text" name="address" class="input-field color-2" placeholder="Address *" required> 
                            <div class="focus"></div>
                         </div>
                         <div class="empty-sm-20 empty-xs-20"></div>
@@ -163,22 +174,23 @@ Your cart
                   <div class="row">
                      <div class="col-sm-12 col-xs-12">
                         <div class="input-field-wrap">
-                           <input type="email" class="input-field color-2" placeholder="City *" value="Lagos" readonly> 
+                           <input type="text" name="city" class="input-field color-2" placeholder="City *" value="Lagos" readonly> 
                            <div class="focus"></div>
                         </div>
                         <div class="empty-sm-20 empty-xs-20"></div>
                      </div>                     
                   </div>                  
                   <div class="input-field-wrap">
-                     <textarea placeholder="Additional instructions" class="input-field color-2"></textarea>
+                     <textarea name="instructions" placeholder="Additional instructions" class="input-field color-2"></textarea>
                      <div class="focus"></div>
                   </div>
-                  <div class="empty-sm-50 empty-xs-50"></div>           
-               
-               <div class="fr button-full-width">
-                  <a href="{{ route('shop.index') }}" class="page-button button-style-1 type-2"><span class="txt">Back to meals</span></a>
-                  <a href="/checkout" class="page-button button-style-1 type-4"><span class="txt">Checkout</span></a>
-               </div>
+                  <p><u>Payment: At this time, we only accept cash on delivery.</u></p>
+                  <div class="empty-sm-50 empty-xs-50"></div>
+                  
+                  <div class="fr button-full-width">
+                     <a href="{{ route('shop.index') }}" class="page-button button-style-1 type-2"><span class="txt">Back to meals</span></a>
+                     <button type="submit" class="page-button button-style-1 type-4"><span class="txt">Checkout</span></button>
+                  </div>
                </form>
             </div>
          </div>         

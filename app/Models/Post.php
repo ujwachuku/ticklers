@@ -4,12 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PostCategory extends Model
+class Post extends Model
 {
     protected $fillable = [
-    	'post_category_name',
+    	'post_name',
     	'slug',
-    	'post_category_description',
+    	'post_content',
+    	'post_category_id',
+    	'post_image',
+    	'is_featured',
+    	'is_published',
     	'user_id'
     ];
 
@@ -23,8 +27,8 @@ class PostCategory extends Model
     	return $this->belongsTo(User::class);
     }
 
-    public function post()
+    public function category()
     {
-    	return $ths->hasMany(Post::class);
+    	return $this->belongsTo(PostCategory::class);
     }
 }

@@ -12,7 +12,7 @@ class CartController extends Controller
     public function index()
     {
         $itemCount = Cart::content()->count();
-        
+
         return view('shop.cart', compact('itemCount'));
     }
 

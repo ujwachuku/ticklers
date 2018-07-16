@@ -4,7 +4,7 @@
       <div class="row">
          <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="footer-item">
-               <img src="img/logo.png" alt="{{ config('app.name') }}">
+               <img src="/img/test-ticklers-1.png" alt="{{ config('app.name') }}">
                <div class="empty-sm-15 empty-xs-15"></div>
                <div class="simple-text">
                   <p style="color: #fff;">Ticklers Quick Service Restaurant is a high quality restaurant situated in Shangisha- Lagos. We pride ourselves on making high quality meals of different types and tastes.</p>
@@ -97,7 +97,7 @@
                <ul class="list-style-3 ul-list">
                   <li><a href="/" class="link-hover">Home</a></li>
                   <li><a href="{{ route('shop.index') }}" class="link-hover">Meals</a></li>
-                  <li><a href="#" class="link-hover">News</a></li>
+                  <li><a href="{{ route('posts.index') }}" class="link-hover">News</a></li>
                   <li><a href="{{ route('about') }}" class="link-hover">About</a></li>
                   <li><a href="{{ route('contact') }}" class="link-hover">Contact</a></li>                  
                </ul>

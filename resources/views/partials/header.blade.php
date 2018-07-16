@@ -1,7 +1,7 @@
 <header class="header header-style-3">
    <div class="navigation flex-align">
       <a href="/" class="logo">
-         <img src="/img/logo.png" alt="{{ config('app.name') }}"><img src="/img/logo2.png" alt="{{ config('app.name') }}" class="logo-type-2">
+         <img src="/img/test-ticklers-1.png" alt="{{ config('app.name') }}"><img src="/img/test-ticklers-1.png" alt="{{ config('app.name') }}" class="logo-type-2">
       </a>
       <div class="burger-menu"><i></i></div>
       <div class="nav">
@@ -15,7 +15,7 @@
                      <a href="{{ route('shop.index') }}">Meals</a>
                   </li>
                   <li>
-                     <a href="/news">News</a>
+                     <a href="{{ route('posts.index') }}">News</a>
                   </li>
                   <li>
                      <a href="{{ route('about') }}">About</a>
