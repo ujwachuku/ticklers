@@ -235,6 +235,7 @@ Latest updates from Ticklers
                      </div>
                   </div>
                </div>
+               <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
                @endif
                @if(count($posts) > 0)
                <div class="row">
