@@ -103,6 +103,7 @@ The best food in Lagos
       </div>      
    </section>
    @endif
+   @if(count($posts) > 0)
    <section class="section">
       <div class="bg left auto pos-center-left lgx-hide" style="background-image: url(/img/home-4/news_bg.jpg)"></div>
       <div class="bg right auto pos-center-right lgx-hide" style="background-image: url(/img/home-4/news_bg2.jpg)"></div>
@@ -124,70 +125,33 @@ The best food in Lagos
          </div>
          <div class="col-md-12">
             <div class="row">
+               @foreach($posts as $post)
                <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="simple-item text-center">
                      <div class="image hover-zoom">
-                        <a href=""><img src="/img/home-4/news_img_1.jpg" alt="" class="resp-img"></a>
+                        <a href="{{ route('posts.post', $post->slug) }}"><img src="/img/home-4/news_img_1.jpg" alt="{{ $post->post_name }}" class="resp-img"></a>
                      </div>
                      <div class="empty-sm-10 empty-xs-10"></div>
-                     <h5 class="h5 caption"><a href="#" class="link-hover-line">2016 MenuMasters awards</a></h5>
+                     <h5 class="h5 caption"><a href="{{ route('posts.post', $post->slug) }}" class="link-hover-line">{{ $post->post_name }}</a></h5>
                      <div class="empty-sm-10 empty-xs-10"></div>
                      <div class="simple-text xs">
-                        <p>April 17, 2016</p>
+                        <p>{{ $post->created_at->toFormattedDateString() }}</p>
                      </div>
                      <div class="empty-sm-5 empty-xs-5"></div>
                      <div class="simple-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</p>
+                        <p>{{ substr($post->post_content, 0, 100) }}...</p>
                      </div>
                      <div class="empty-sm-10 empty-xs-10"></div>
-                     <a href="#" class="page-button button-style-1 type-2 sm"><span class="txt">CONTINUE READING</span><i></i></a>
+                     <a href="{{ route('posts.post', $post->slug) }}" class="page-button button-style-1 type-2 sm"><span class="txt">CONTINUE READING</span><i></i></a>
                      <div class="empty-md-0 empty-sm-30 empty-xs-30"></div>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="simple-item text-center">
-                     <div class="image hover-zoom">
-                        <a href=""><img src="/img/home-4/news_img_2.jpg" alt="" class="resp-img"></a>
-                     </div>
-                     <div class="empty-sm-10 empty-xs-10"></div>
-                     <h5 class="h5 caption"><a href="#" class="link-hover-line">Restaurants experience weak</a></h5>
-                     <div class="empty-sm-10 empty-xs-10"></div>
-                     <div class="simple-text xs">
-                        <p>April 17, 2016</p>
-                     </div>
-                     <div class="empty-sm-5 empty-xs-5"></div>
-                     <div class="simple-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</p>
-                     </div>
-                     <div class="empty-sm-10 empty-xs-10"></div>
-                     <a href="#" class="page-button button-style-1 type-2 sm"><span class="txt">CONTINUE READING</span><i></i></a>
-                     <div class="empty-md-0 empty-sm-30 empty-xs-30"></div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="simple-item text-center">
-                     <div class="image hover-zoom">
-                        <a href=""><img src="/img/home-4/news_img_2.jpg" alt="" class="resp-img"></a>
-                     </div>
-                     <div class="empty-sm-10 empty-xs-10"></div>
-                     <h5 class="h5 caption"><a href="#" class="link-hover-line">Restaurants experience weak</a></h5>
-                     <div class="empty-sm-10 empty-xs-10"></div>
-                     <div class="simple-text xs">
-                        <p>April 17, 2016</p>
-                     </div>
-                     <div class="empty-sm-5 empty-xs-5"></div>
-                     <div class="simple-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</p>
-                     </div>
-                     <div class="empty-sm-10 empty-xs-10"></div>
-                     <a href="#" class="page-button button-style-1 type-2 sm"><span class="txt">CONTINUE READING</span><i></i></a>
-                     <div class="empty-md-0 empty-sm-30 empty-xs-30"></div>
-                  </div>
-               </div>
+               @endforeach
             </div>
          </div>         
       </div>
    </section>
+   @endif
    <section class="section">
       <div class="bg left contain lgx-hide" style="background-image: url(/img/home-4/contact_left_img.jpg)"></div>
       <div class="bg right contain lgx-hide" style="background-image: url(/img/home-4/contact_right_img.jpg)"></div>

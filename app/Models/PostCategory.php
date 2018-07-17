@@ -20,11 +20,11 @@ class PostCategory extends Model
 
     public function user()
     {
-    	return $this->belongsTo(User::class);
+    	return $this->belongsTo('App\User');
     }
 
     public function post()
     {
-    	return $ths->hasMany(Post::class);
+    	return $this->hasMany(Post::class);
     }
 }

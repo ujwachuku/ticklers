@@ -24,12 +24,12 @@ class Meal extends Model
 
     public function user()
     {
-    	return $this->belongsTo(User::class);
+    	return $this->belongsTo('App\User');
     }
 
     public function mealCategory()
     {
-    	return $this->belongsTo(MealCategory::class);
+    	return $this->belongsTo(MealCategory::class, 'meal_category_id');
     }
 
     public function presentPrice()
