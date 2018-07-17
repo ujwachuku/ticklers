@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\Guest;
 use App\Models\OrderCart;
+use Mail;
+use App\Mail\OrderReceived;
+use App\Mail\OrderReceivedManagement;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 
@@ -68,6 +71,12 @@ class OrderController extends Controller
         $order->is_fulfilled = false;
 
         $order->save();
+
+        // Dispatch email to user and Ticklers
+        Mail::to($guest->email)->send(new OrderReceived($order));
+        Mail::to('info@ticklers.com')->send(new OrderReceivedManagement($order));
+        Mail::to('emekathrust@yahoo.com')->send(new OrderReceivedManagement($order));
+
 
         session(['order' => $order]);
 
