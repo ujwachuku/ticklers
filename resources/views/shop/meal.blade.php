@@ -95,7 +95,7 @@
                   <div class="tab-container-item">
                      <div class="empty-sm-60 empty-xs-30"></div>
                      <div class="simple-text">
-                        <p>{{ $meal->meal_description }}</p>
+                        <p>{!! $meal->meal_description !!}</p>
                      </div>                     
                   </div>                  
                </div>
