@@ -3,7 +3,7 @@
 
 You can view details of this order by logging into the admin panel of the Ticklers web application.
 
-@component('mail::button', ['url' => '', 'color' => 'green'])
+@component('mail::button', ['url' => 'http://ticklersfood.com/admin', 'color' => 'green'])
 Login
 @endcomponent
 
