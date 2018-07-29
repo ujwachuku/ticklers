@@ -136,7 +136,7 @@
                               <div class="empty-sm-25"></div>
                               <div class="col-md-10 col-md-offset-1">
                                  <div class="simple-text md opacity-1">
-                                    <p>Please go back to the <a href="{{ route('shop.index') }}">shop</a> to order your first item...</p>
+                                    <p>Please go back to the <a href="{{ route('shop.index') }}">shop</a> to order your first meal...</p>
                                  </div>
                               </div>                     
                            </div>
