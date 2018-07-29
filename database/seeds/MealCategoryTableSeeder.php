@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\MealCategory;
+use App\MealCategory;
 use Illuminate\Database\Seeder;
 
 class MealCategoryTableSeeder extends Seeder
