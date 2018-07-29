@@ -293,5 +293,5 @@ Contact us
 @endsection
 
 @section('scripts')
-	
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOJxqBTpjRXdgM8UM0UXuLCmK_AKF9NPs"></script>	
 @endsection

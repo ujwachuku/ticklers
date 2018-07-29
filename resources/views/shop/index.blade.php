@@ -132,7 +132,7 @@ All of our meals and drinks
                      <div class="empty-sm-60 empty-xs-50"></div>
                      <div class="menu-item menu-item-2 type-2">
                         <div class="image hover-zoom">
-                           <img src="/img/product-7.png" alt="{{ $meal->meal_name }}">
+                           <img src="{{ Voyager::image($meal->thumbnail('cropped', 'meal_image')) }}" alt="{{ $meal->meal_name }}">
                            <div class="vertical-align full menu-button">
                               <form action="{{ route('shop.cart.store') }}" method="POST">
                                  @csrf

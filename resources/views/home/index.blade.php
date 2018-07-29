@@ -33,7 +33,7 @@ The best food in Lagos
             <div class="col-md-4 col-sm-4 col-xs-12">
                <div class="menu-item menu-item-4">
                   <div class="image hover-zoom">
-                     <img src="{{ Voyager::image($category->thumbnail('cropped')) }}" alt="{{ $category->meal_category_name }}">
+                     <img src="{{ Voyager::image($category->thumbnail('cropped', 'meal_category_image')) }}" alt="{{ $category->meal_category_name }}">
                      <div class="vertical-align full menu-button">
                         <a href="{{ route('shop.meal.category', $category->slug) }}" class="page-button button-style-1 sm"><span class="txt">view more</span></a>
                      </div>
@@ -73,7 +73,7 @@ The best food in Lagos
             <div class="col-md-4">
                <div class="menu-item menu-item-6">
                   <div class="image">
-                     <img src="{{ Voyager::image($meal->thumbnail('cropped')) }}" alt="{{ $meal->meal_name }}" class="resp-img">
+                     <img src="{{ Voyager::image($meal->thumbnail('cropped', 'meal_image')) }}" alt="{{ $meal->meal_name }}" class="resp-img">
                      <div class="vertical-align full menu-button">
                         <a href="{{ route('shop.meal', $meal->slug) }}" class="page-button button-style-1 type-2"><span class="txt">quick view</span></a>
                         <form action="{{ route('shop.cart.store') }}" method="POST">
@@ -91,7 +91,7 @@ The best food in Lagos
                      <h4 class="h4 caption"><a href="{{ route('shop.meal', $meal->slug) }}" class="link-hover-line">{{ $meal->meal_name }}</a></h4>
                      <div class="empty-sm-5 empty-xs-5"></div>
                      <div class="simple-text">
-                        <p><b>Description: </b>{{ substr($meal->meal_description,0,100) }}...</p>
+                        <p><b>Description: </b>{!! substr($meal->meal_description,0,100) !!}...</p>
                      </div>
                      <div class="menu-price fw-400 main-col">{{ $meal->presentPrice() }}</div>
                   </div>
@@ -210,5 +210,5 @@ The best food in Lagos
 @endsection
 
 @section('scripts')
-	
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOJxqBTpjRXdgM8UM0UXuLCmK_AKF9NPs"></script>	
 @endsection

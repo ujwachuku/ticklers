@@ -7,15 +7,8 @@ use TCG\Voyager\Traits\Resizable;
 
 class MealCategory extends Model
 {
-    use Resizable;
+    use Resizable;    
     
-    // protected $fillable = [
-    // 	'meal_category_name',
-    // 	'slug',
-    // 	'meal_category_description',
-    // 	'meal_category_image',
-    // 	'user_id'
-    // ];
 
     public function user()
     {

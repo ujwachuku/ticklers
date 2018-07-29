@@ -84,12 +84,10 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js"></script>
-      <script src="/js/jquery-ui.min.js"></script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOJxqBTpjRXdgM8UM0UXuLCmK_AKF9NPs"></script>
+      <script src="/js/jquery-ui.min.js"></script>      
       <script src="/js/jscolor.min.js"></script>
       <script src="/js/jquery.knob.js"></script>
-      <script src="/js/jquery.throttle.js"></script>
-      <script src="/js/jquery.classycountdown.js"></script>
+      <script src="/js/jquery.throttle.js"></script>      
       <script src="/js/jarallax.js"></script>
       <script src="/js/all.js"></script>
       <script src="/js/color.picker.js"></script>

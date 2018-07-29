@@ -9,17 +9,6 @@ class Meal extends Model
 {
     use Resizable;
     
-    // protected $fillable = [
-    // 	'meal_name',
-    // 	'slug',
-    // 	'price',
-    // 	'meal_description',
-    // 	'meal_iamge',
-    // 	'meal_category_id',
-    // 	'user_id',
-    // 	'is_published'
-    // ];
-
     public function getRouteKeyname()
     {
         return 'slug';
