@@ -23,7 +23,7 @@
                            <div class="empty-sm-30"></div>
                            <div class="col-md-10 col-md-offset-1">
                               <div class="simple-text md">
-                                 <p style="color: #fff; font-weight: bold;">{!! substr($post->body, 0, 100) !!}...</p>
+                                 <p style="color: #fff !important; font-weight: bold !important;">{!! substr($post->body, 0, 100) !!}...</p>
                               </div>
                            </div>
                         </div>
@@ -200,7 +200,7 @@
                                  </div>
                                  <div class="simple-text xs inline">
                                     <a href="">
-                                       <p>{{ $post->category->post_category_name }}</p>
+                                       <p>{{ $post->category->name }}</p>
                                     </a>
                                  </div>
                               </li>

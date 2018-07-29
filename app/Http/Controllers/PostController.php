@@ -12,7 +12,7 @@ class PostController extends Controller
     {
         $categories = Category::orderBy('name', 'desc')->get();
 
-        $posts = Post::where('status', 'PUBLISHED')->latest()->paginate(5);
+        $posts = Post::where('status', 'PUBLISHED')->latest()->paginate(7);
 
         return view('posts.index', compact('categories', 'posts'));
     }

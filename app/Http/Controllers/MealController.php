@@ -20,7 +20,7 @@ class MealController extends Controller
     		$meals = Meal::inRandomOrder()
     			->where('is_published', true)
     			->where('meal_name','LIKE','%'.$request->input('q').'%')
-    			->get();
+    			->paginate(15);
 
     		$search = true;
     	}
@@ -29,7 +29,7 @@ class MealController extends Controller
     		// Get all meals in random order. Paginate the collection
     		$meals = Meal::inRandomOrder()
     			->where('is_published', true)
-    			->get();
+    			->paginate(15);
 
     		$search = false;
     	}   	
@@ -54,7 +54,6 @@ class MealController extends Controller
     {
     	// Get meal categories
     	$categories = MealCategory::inRandomOrder()->get();
-
         
 
     	if ($request->has('q')) 
@@ -64,7 +63,7 @@ class MealController extends Controller
                 ->where('is_published', true)
                 ->where('meal_category_id', $catDetail->id)
                 ->where('meal_name','LIKE','%'.$request->input('q').'%')
-                ->get();
+                ->paginate(15);
 
             $search = true;
         }

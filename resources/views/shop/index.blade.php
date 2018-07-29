@@ -153,8 +153,12 @@ All of our meals and drinks
                            <div class="menu-price style-2 main-col">{{ $meal->presentPrice() }}</div>
                         </div>
                      </div>
-                  </div>
+                  </div>                                  
                   @endforeach
+                  <div class="empty-lg-70 empty-md-50 empty-sm-40 empty-xs-30"></div>
+                  <div class="page-navigation">
+                     {{ $meals->links() }}
+                  </div>  
                   @else
                   <div class="row">
                      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">

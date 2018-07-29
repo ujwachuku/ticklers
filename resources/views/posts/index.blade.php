@@ -43,7 +43,7 @@ Latest updates from Ticklers
                @foreach($posts as $post)
                <article>
                   <div class="menu-item menu-item-2 color-type-1 hover-zoom">
-                     <a href="{{ route('posts.post', $post->slug) }}" class="image-hover"><img src="img/blog/post-4.jpg" alt="" class="full-img"></a>
+                     <a href="{{ route('posts.post', $post->slug) }}" class="image-hover"><img src="/storage/{{ $post->image}}" alt="{{ $post->title }}" class="full-img"></a>
                   </div>
                   <div class="text-block-wrapp text-left color-type-2">
                      <div class="empty-sm-30 empty-xs-10"></div>
@@ -213,13 +213,20 @@ Latest updates from Ticklers
                      </div>
                      <div class="empty-sm-20 empty-xs-10"></div>
                      <div class="simple-text">
-                        <p>{{ substr($post->post_content, 0, 100) }}...</p>
+                        <p>{!! substr($post->body, 0, 100) !!}...</p>
                      </div>
                      <div class="empty-sm-30 empty-xs-20"></div>
                      <a href="{{ route('posts.post', $post->slug) }}" class="page-button button-style-1 type-2"><span class="txt">Read more</span></a>
                   </div>
                   <div class="empty-sm-50 empty-xs-50"></div>
                </article>
+               <div class="empty-lg-50 empty-md-30 empty-sm-10 empty-xs-10"></div>
+               <div class="col-lg-9 col-lg-offset-3 col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0">
+                  <div class="page-navigation">
+                     {{ $posts->links() }}
+                  </div>
+               </div>               
+               <div class="empty-lg-70 empty-md-50 empty-sm-40 empty-xs-30"></div>
                @endforeach
                @else
                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
@@ -237,65 +244,7 @@ Latest updates from Ticklers
                </div>
                <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
                @endif
-               @if(count($posts) > 0)
-               <div class="row">
-                  <div class="col-md-10 col-md-offset-1 col-xs-12">
-                     <div class="page-navigation">
-                        <a href="#" class="left-arr">
-                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="6px" height="8px" viewBox="0 0 292.359 292.359" style="enable-background:new 0 0 292.359 292.359;" xml:space="preserve">
-                              <g>
-                                 <path d="M222.979,5.424C219.364,1.807,215.08,0,210.132,0c-4.949,0-9.233,1.807-12.848,5.424L69.378,133.331   c-3.615,3.617-5.424,7.898-5.424,12.847c0,4.949,1.809,9.233,5.424,12.847l127.906,127.907c3.614,3.617,7.898,5.428,12.848,5.428   c4.948,0,9.232-1.811,12.847-5.428c3.617-3.614,5.427-7.898,5.427-12.847V18.271C228.405,13.322,226.596,9.042,222.979,5.424z" fill="#898989"></path>
-                              </g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                           </svg>
-                        </a>
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <span>...</span>
-                        <a href="#">29</a>
-                        <a href="#" class="right-arr">
-                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="6px" height="8px" viewBox="0 0 292.359 292.359" style="enable-background:new 0 0 292.359 292.359;" xml:space="preserve">
-                              <g>
-                                 <path d="M222.979,133.331L95.073,5.424C91.456,1.807,87.178,0,82.226,0c-4.952,0-9.233,1.807-12.85,5.424   c-3.617,3.617-5.424,7.898-5.424,12.847v255.813c0,4.948,1.807,9.232,5.424,12.847c3.621,3.617,7.902,5.428,12.85,5.428   c4.949,0,9.23-1.811,12.847-5.428l127.906-127.907c3.614-3.613,5.428-7.897,5.428-12.847   C228.407,141.229,226.594,136.948,222.979,133.331z" fill="#898989"></path>
-                              </g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                              <g></g>
-                           </svg>
-                        </a>
-                     </div>
-                  </div>
-                  <div class="empty-lg-140 empty-md-100 empty-sm-50 empty-xs-50"></div>
-               </div>
-               @endif
+               
             </div>
             <div class="col-md-3 col-xs-12">
                <aside>
@@ -331,7 +280,7 @@ Latest updates from Ticklers
                   <div class="empty-sm-20 empty-xs-10"></div>
                   <ul class="list-style-4 type-2 ul-list">
                      @foreach($categories as $category)
-                     <li><a href="#" class="link-hover">{{ $category->post_category_name }}</a></li>
+                     <li><a href="#" class="link-hover">{{ $category->name }}</a></li>
                      @endforeach
                   </ul>
                   <div class="empty-sm-65 empty-xs-50"></div>

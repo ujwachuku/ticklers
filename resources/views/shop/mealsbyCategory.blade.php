@@ -152,7 +152,7 @@
                            <div class="menu-price style-2 main-col">{{ $meal->presentPrice() }}</div>
                         </div>
                      </div>
-                  </div>
+                  </div>                  
                   @endforeach
                   @else
                   <div class="row">
