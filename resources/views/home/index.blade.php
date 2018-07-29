@@ -139,7 +139,7 @@ The best food in Lagos
                      </div>
                      <div class="empty-sm-5 empty-xs-5"></div>
                      <div class="simple-text">
-                        <p>{{ substr($post->post_content, 0, 100) }}...</p>
+                        <p>{!! substr($post->body, 0, 100) !!}...</p>
                      </div>
                      <div class="empty-sm-10 empty-xs-10"></div>
                      <a href="{{ route('posts.post', $post->slug) }}" class="page-button button-style-1 type-2 sm"><span class="txt">CONTINUE READING</span><i></i></a>
