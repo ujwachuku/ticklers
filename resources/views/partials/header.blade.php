@@ -16,10 +16,7 @@
                   </li>
                   <li>
                      <a href="{{ route('posts.index') }}">News</a>
-                  </li>
-                  <li>
-                     <a href="{{ route('about') }}">About</a>
-                  </li>
+                  </li>                  
                   <li>
                      <a href="{{ route('contact') }}">Contact</a>
                   </li>

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-{{ $post->post_name }}
+{{ $post->title }}
 @endsection
 
 @section('styles')
@@ -19,11 +19,11 @@
                   <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
                      <div class="simple-item color-type-1 text-center">
                         <div class="main-title">
-                           <h2 class="h2 title">{{ $post->post_name }}</h2>
+                           <h2 class="h2 title">{{ $post->title }}</h2>
                            <div class="empty-sm-30"></div>
                            <div class="col-md-10 col-md-offset-1">
                               <div class="simple-text md">
-                                 <p style="color: #fff; font-weight: bold;">{{ substr($post->post_content, 0, 100) }}...</p>
+                                 <p style="color: #fff; font-weight: bold;">{!! substr($post->body, 0, 100) !!}...</p>
                               </div>
                            </div>
                         </div>
@@ -42,7 +42,7 @@
                <article>
                   <div class="simple-item color-type-2 text-center">
                      <div class="main-title">
-                        <h2 class="h2 caption">{{ $post->post_name }}</h2>
+                        <h2 class="h2 caption">{{ $post->title }}</h2>
                         <div class="empty-sm-20 empty-xs-5"></div>
                         <div class="blog-info">
                            <ul>
@@ -209,51 +209,10 @@
                         <div class="empty-sm-65 empty-xs-30"></div>
                      </div>
                   </div>
-                  <div class="video-open">
-                     <img src="/img/blog/video-bg.jpg" alt="" class="resp-img">
-                     <div class="vertical-align full">
-                        <a href="#" class="play-button" data-video="https://www.youtube.com/embed/XRnZiqk5Grs?autoplay=1">
-                           <span class="play-button-wrap">
-                              <svg version="1.1" class="vertical-align full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 443.307 443.306" style="enable-background:new 0 0 443.307 443.306;" xml:space="preserve">
-                                 <g>
-                                    <path d="M415.934,212.799L36.788,2.097C32.411-0.377,28.65-0.661,25.51,1.242c-3.14,1.902-4.708,5.328-4.708,10.276V431.78
-                                       c0,4.952,1.569,8.381,4.708,10.284c3.14,1.902,6.901,1.622,11.278-0.855l379.146-210.703c4.381-2.478,6.571-5.434,6.571-8.856
-                                       C422.505,218.224,420.314,215.274,415.934,212.799z"></path>
-                                 </g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                                 <g></g>
-                              </svg>
-                           </span>
-                        </a>
-                     </div>
-                     <div class="video-item">
-                        <div class="video-wrapper">
-                           <div class="video-iframe"></div>
-                           <div class="close-video main-fill-col">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 21.9 21.9" enable-background="new 0 0 21.9 21.9" width="14px" height="14px">
-                                 <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z" fill="#FFFFFF"></path>
-                              </svg>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
                   <div class="text-block-wrapp text-left color-type-2">
                      <div class="empty-sm-45 empty-xs-20"></div>
                      <div class="simple-text">
-                        <p>{{ $post->post_content }}</p>
+                        <p>{!! $post->body !!}</p>
                      </div>
                      <div class="empty-sm-25 empty-xs-10"></div>                     
                   </div>
@@ -272,14 +231,14 @@
                <article>
                   <div class="empty-sm-50 empty-xs-30"></div>
                   <div class="menu-item menu-item-2 color-type-1 hover-zoom">
-                     <a href="{{ route('posts.post', $article->slug) }}" class="image-hover"><img src="/img/blog/read-post-1.jpg" alt="" class="full-img"></a>
+                     <a href="{{ route('posts.post', $article->slug) }}" class="image-hover"><img src="{{ Voyager::image($article->thumbnail('cropped')) }}" alt="{{ $article->title }}" class="full-img"></a>
                   </div>
                   <div class="text-block-wrapp text-left color-type-2">
                      <div class="empty-sm-25 empty-xs-10"></div>
-                     <h4 class="h4 tt color-type-1"><a href="{{ route('posts.post', $article->slug) }}" class="title-blog">{{ $article->post_name }}</a></h4>
+                     <h4 class="h4 tt color-type-1"><a href="{{ route('posts.post', $article->slug) }}" class="title-blog">{{ $article->title }}</a></h4>
                      <div class="empty-sm-15 empty-xs-10"></div>
                      <div class="simple-text">
-                        <p>{{ substr($article->post_content, 0, 100) }}...</p>
+                        <p>{!! substr($article->body, 0, 100) !!}...</p>
                      </div>
                   </div>
                </article>

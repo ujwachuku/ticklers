@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MealCategory;
-Use App\Models\Meal;
+use App\MealCategory;
+Use App\Meal;
 
 use Illuminate\Http\Request;
 
@@ -50,17 +50,34 @@ class MealController extends Controller
     	return view('shop.meal', compact('meal', 'upSells'));
     }
 
-    public function mealsByCategory($category)
+    public function mealsByCategory(Request $request, $category)
     {
     	// Get meal categories
     	$categories = MealCategory::inRandomOrder()->get();
 
-    	// Get meals is the selected category
-    	$meals = MealCategory::with('meal')
-    		->where('slug', $category)
-    		->first();
+        
 
-    	$search = true;
+    	if ($request->has('q')) 
+        {
+            $catDetail = MealCategory::where('meal_category_name', $request->input('category'))->first();
+            $meals = Meal::inRandomOrder()
+                ->where('is_published', true)
+                ->where('meal_category_id', $catDetail->id)
+                ->where('meal_name','LIKE','%'.$request->input('q').'%')
+                ->get();
+
+            $search = true;
+        }
+        else
+        {
+            // Get meals is the selected category
+            $meals = MealCategory::with('meal')
+                ->where('slug', $category)
+                ->first();
+
+            $search = false;
+        }
+        
     	
     	// Return to view
     	return view('shop.mealsByCategory', compact('categories', 'meals', 'search'));

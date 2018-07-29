@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Order;
-use App\Models\Guest;
-use App\Models\OrderCart;
+use App\Order;
+use App\Guest;
+use App\OrderCart;
 use Mail;
 use App\Mail\OrderReceived;
 use App\Mail\OrderReceivedManagement;
@@ -50,7 +50,7 @@ class OrderController extends Controller
         // Save guest
         $guest = new Guest;
 
-        $guest->cart_row_id = $cartId;
+        $guest->order_cart_id = $cartId;
         $guest->fname = $request->input('first_name');
         $guest->lname = $request->input('last_name');
         $guest->email = $request->input('email');

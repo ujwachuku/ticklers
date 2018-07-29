@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Meal;
+use App\Meal;
 use Auth;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;

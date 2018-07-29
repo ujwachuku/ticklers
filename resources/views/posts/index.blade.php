@@ -47,7 +47,7 @@ Latest updates from Ticklers
                   </div>
                   <div class="text-block-wrapp text-left color-type-2">
                      <div class="empty-sm-30 empty-xs-10"></div>
-                     <h4 class="h4 tt color-type-1"><a href="{{ route('posts.post', $post->slug) }}" class="title-blog">{{ $post->post_name }}</a></h4>
+                     <h4 class="h4 tt color-type-1"><a href="{{ route('posts.post', $post->slug) }}" class="title-blog">{{ $post->title }}</a></h4>
                      <div class="empty-sm-20 empty-xs-10"></div>
                      <div class="blog-info">
                         <ul>
@@ -205,7 +205,7 @@ Latest updates from Ticklers
                               </div>
                               <div class="simple-text xs inline">
                                  <a href="#">
-                                    <p>{{ $post->category->post_category_name }}</p>
+                                    <p>{{ $post->category->name }}</p>
                                  </a>
                               </div>
                            </li>

@@ -129,10 +129,10 @@ The best food in Lagos
                <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="simple-item text-center">
                      <div class="image hover-zoom">
-                        <a href="{{ route('posts.post', $post->slug) }}"><img src="/img/home-4/news_img_1.jpg" alt="{{ $post->post_name }}" class="resp-img"></a>
+                        <a href="{{ route('posts.post', $post->slug) }}"><img src="{{ Voyager::image($post->thumbnail('cropped')) }}" alt="{{ $post->post_title }}" class="resp-img"></a>
                      </div>
                      <div class="empty-sm-10 empty-xs-10"></div>
-                     <h5 class="h5 caption"><a href="{{ route('posts.post', $post->slug) }}" class="link-hover-line">{{ $post->post_name }}</a></h5>
+                     <h5 class="h5 caption"><a href="{{ route('posts.post', $post->slug) }}" class="link-hover-line">{{ $post->title }}</a></h5>
                      <div class="empty-sm-10 empty-xs-10"></div>
                      <div class="simple-text xs">
                         <p>{{ $post->created_at->toFormattedDateString() }}</p>

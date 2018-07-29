@@ -26,8 +26,8 @@ class CreateMealsTable extends Migration
             $table->boolean('is_featured')->default(false);
             $table->timestamps();
 
-            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            // $table->foreign('meal_category_id')->references('id')->on('meal_categories')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('meal_category_id')->references('id')->on('meal_categories')->onDelete('cascade');
         });
     }
 

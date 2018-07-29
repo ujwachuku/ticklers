@@ -1,5 +1,14 @@
 <?php
 
+Route::group(
+	[
+		'prefix' => 'admin'
+	],
+	
+	function () {
+    Voyager::routes();
+});
+
 Route::get('/', 'PageController@index')->name('home.index');
 Route::get('about', 'PageController@about')->name('about');
 Route::get('contact', 'PageController@contact')->name('contact');
@@ -19,4 +28,7 @@ Route::get('thank-you', 'PageController@thanks')->name('shop.thanks');
 Route::get('news', 'PostController@index')->name('posts.index');
 Route::get('news/{post}', 'PostController@show')->name('posts.post');
 // Auth::routes();
+
+
+
 

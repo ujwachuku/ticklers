@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
-use App\Models\PostCategory;
+use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $categories = PostCategory::orderBy('post_category_name', 'desc')->get();
+        $categories = Category::orderBy('name', 'desc')->get();
 
-        $posts = Post::where('is_published', true)->latest()->paginate(5);
+        $posts = Post::where('status', 'PUBLISHED')->latest()->paginate(5);
 
         return view('posts.index', compact('categories', 'posts'));
     }
@@ -27,9 +27,11 @@ class PostController extends Controller
         //
     }
 
-    public function show(Post $post)
+    public function show($slug)
     {
-        $recommended = Post::where('is_published', true)
+        $post = Post::where('slug', $slug)->where('status', 'PUBLISHED')->first();
+
+        $recommended = Post::where('status', 'PUBLISHED')
         ->where('slug', '<>', $post->slug)
             ->inRandomOrder()
             ->take(3)

@@ -41,7 +41,7 @@ All of our meals and drinks
             <div class="col-lg-2 col-md-3 col-xs-12">
                <aside>
                   <form action="" class="search-form type-2">
-                     <input type="text" name="q"placeholder="Search for..." class="input-search">
+                     <input type="text" name="q" placeholder="Search for..." class="input-search">
                      <div class="submit-search">
                         <input type="submit" value="">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="14px" height="14px">
@@ -126,6 +126,7 @@ All of our meals and drinks
                   </div>
                </div>
                <div class="row row-4-columns row-3-columns row-2-columns">
+                  @if(count($meals) > 0)
                   @foreach($meals as $meal)
                   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                      <div class="empty-sm-60 empty-xs-50"></div>
@@ -153,7 +154,22 @@ All of our meals and drinks
                         </div>
                      </div>
                   </div>
-                  @endforeach                  
+                  @endforeach
+                  @else
+                  <div class="row">
+                     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+                        <div class="simple-item color-type-2 text-center">
+                           <div class="main-title">                              
+                              <h2 class="h2 title">There are no meals at this time</h2>
+                              <div class="empty-sm-25"></div>
+                              <div class="col-md-10 col-md-offset-1"></div>
+                              </div>                     
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="empty-lg-70 empty-md-50 empty-sm-40 empty-xs-30"></div>
+                  @endif                 
                </div>
                <div class="empty-lg-70 empty-md-50 empty-sm-40 empty-xs-30"></div>               
             </div>
