@@ -4,9 +4,9 @@ Route::group(
 	[
 		'prefix' => 'admin'
 	],
-	
+
 	function () {
-    Voyager::routes();
+    	Voyager::routes();
 });
 
 Route::get('/', 'PageController@index')->name('home.index');
