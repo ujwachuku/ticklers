@@ -33,7 +33,7 @@ The best food in Lagos
             <div class="col-md-4 col-sm-4 col-xs-12">
                <div class="menu-item menu-item-4">
                   <div class="image hover-zoom">
-                     <img src="/img/product-7.png" alt="{{ $category->meal_category_name }}">
+                     <img src="{{ Voyager::image($category->thumbnail('cropped')) }}" alt="{{ $category->meal_category_name }}">
                      <div class="vertical-align full menu-button">
                         <a href="{{ route('shop.meal.category', $category->slug) }}" class="page-button button-style-1 sm"><span class="txt">view more</span></a>
                      </div>
@@ -73,7 +73,7 @@ The best food in Lagos
             <div class="col-md-4">
                <div class="menu-item menu-item-6">
                   <div class="image">
-                     <img src="/img/product-7.png" alt="{{ $meal->meal_name }}" class="resp-img">
+                     <img src="{{ Voyager::image($meal->thumbnail('cropped')) }}" alt="{{ $meal->meal_name }}" class="resp-img">
                      <div class="vertical-align full menu-button">
                         <a href="{{ route('shop.meal', $meal->slug) }}" class="page-button button-style-1 type-2"><span class="txt">quick view</span></a>
                         <form action="{{ route('shop.cart.store') }}" method="POST">
