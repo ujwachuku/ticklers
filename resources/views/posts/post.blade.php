@@ -23,7 +23,7 @@
                            <div class="empty-sm-30"></div>
                            <div class="col-md-10 col-md-offset-1">
                               <div class="simple-text md">
-                                 <p style="color: #fff !important; font-weight: bold !important;">{!! substr($post->body, 0, 100) !!}...</p>
+                                 <p>{!! substr($post->body, 0, 100) !!}...</p>
                               </div>
                            </div>
                         </div>
