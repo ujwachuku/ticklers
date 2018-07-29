@@ -126,7 +126,7 @@
                   <div class="empty-sm-60 empty-xs-50"></div>
                   <div class="menu-item menu-item-6 type-3">
                      <div class="image">
-                        <img src="/img/product-7.png" alt="{{ $upSell->meal_name }}">
+                        <img src="{{ Voyager::image($upSell->thumbnail('cropped', 'meal_image')) }}" alt="{{ $upSell->meal_name }}">
                         <div class="vertical-align full menu-button">
                            <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                            <div class="empty-sm-10 empty-xs-10"></div>
