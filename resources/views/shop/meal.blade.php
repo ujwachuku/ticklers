@@ -23,7 +23,7 @@
                            <div class="empty-sm-30"></div>
                            <div class="col-md-10 col-md-offset-1">
                               <div class="simple-text md">
-                                 <p style="color: #fff; font-weight: bold;">{{ $meal->meal_description }}</p>
+                                 <p style="color: #fff; font-weight: bold;">{!! $meal->meal_description !!}</p>
                               </div>
                            </div>
                         </div>
