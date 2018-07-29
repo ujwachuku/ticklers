@@ -113,7 +113,7 @@
                   <div class="empty-sm-10 empty-xs-10"></div>
                   <div class="col-md-6 col-md-offset-3 col-xs-12">
                      <div class="simple-text md opacity-1">
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Here are some interesting meals that you can also order with the meal above.</p>
                      </div>
                   </div>
                </div>
@@ -138,7 +138,7 @@
                         <h5 class="h5 caption"><a href="#" class="link-hover-line">{{ $upSell->meal_name }}</a></h5>
                         <div class="empty-sm-5 empty-xs-5"></div>
                         <div class="simple-text">
-                           <p>{{ $upSell->meal_description }}</p>
+                           <p>{!! $upSell->meal_description !!}</p>
                         </div>
                         <div class="menu-price style-2 main-col">{{ $upSell->presentPrice() }}</div>
                      </div>
