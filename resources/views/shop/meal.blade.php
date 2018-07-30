@@ -39,7 +39,7 @@
       <div class="container">
          <div class="row">
             <div class="col-lg-6 col-md-5 col-xs-12">
-               <img src="/img/product-7.png" alt="" class="full-img">
+               <img src="{{ Voyager::image($meal->thumbnail('cropped', 'meal_image')) }}" alt="{{ $meal->meal_name }}" class="full-img">
             </div>
             <div class="col-lg-6 col-md-7 col-xs-12">
                <div class="empty-sm-0 empty-xs-30"></div>
