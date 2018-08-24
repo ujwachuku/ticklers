@@ -98,7 +98,6 @@
                   <li><a href="/" class="link-hover">Home</a></li>
                   <li><a href="{{ route('shop.index') }}" class="link-hover">Meals</a></li>
                   <li><a href="{{ route('posts.index') }}" class="link-hover">News</a></li>
-                  <li><a href="{{ route('about') }}" class="link-hover">About</a></li>
                   <li><a href="{{ route('contact') }}" class="link-hover">Contact</a></li>                  
                </ul>
                <div class="empty-sm-30 empty-xs-30"></div>
