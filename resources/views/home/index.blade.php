@@ -69,35 +69,39 @@ The best food in Lagos
             </div>
          </div>
          <div class="row">
-            @foreach($meals as $meal)
-            <div class="col-md-4">
-               <div class="menu-item menu-item-6">
-                  <div class="image">
-                     <img src="{{ Voyager::image($meal->thumbnail('cropped', 'meal_image')) }}" alt="{{ $meal->meal_name }}" class="resp-img">
-                     <div class="vertical-align full menu-button">
-                        <a href="{{ route('shop.meal', $meal->slug) }}" class="page-button button-style-1 type-2"><span class="txt">quick view</span></a>
-                        <form action="{{ route('shop.cart.store') }}" method="POST">
-                           @csrf
-                           <input type="hidden" name="id" value="{{ $meal->id }}">
-                           <input type="hidden" name="name" value="{{ $meal->meal_name }}">
-                           <input type="hidden" name="price" value="{{ $meal->price }}">
-                           <input type="hidden" name="qty" value="1">
-                           <button class="page-button button-style-1 type-2"><span class="txt">Add to cart</span></button>
-                        </form>
+            @foreach($meals->chunk(3) as $items)
+            <div class="row">
+               @foreach($items as $meal)
+               <div class="col-md-4">
+                  <div class="menu-item menu-item-6">
+                     <div class="image">
+                        <img src="{{ Voyager::image($meal->thumbnail('cropped', 'meal_image')) }}" alt="{{ $meal->meal_name }}" class="resp-img">
+                        <div class="vertical-align full menu-button">
+                           <a href="{{ route('shop.meal', $meal->slug) }}" class="page-button button-style-1 type-2"><span class="txt">quick view</span></a>
+                           <form action="{{ route('shop.cart.store') }}" method="POST">
+                              @csrf
+                              <input type="hidden" name="id" value="{{ $meal->id }}">
+                              <input type="hidden" name="name" value="{{ $meal->meal_name }}">
+                              <input type="hidden" name="price" value="{{ $meal->price }}">
+                              <input type="hidden" name="qty" value="1">
+                              <button class="page-button button-style-1 type-2"><span class="txt">Add to cart</span></button>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="text">
+                        <div class="empty-sm-20 empty-xs-20"></div>
+                        <h4 class="h4 caption"><a href="{{ route('shop.meal', $meal->slug) }}" class="link-hover-line">{{ $meal->meal_name }}</a></h4>
+                        <div class="empty-sm-5 empty-xs-5"></div>
+                        <div class="simple-text">
+                           <p><b>Description: </b>{!! substr($meal->meal_description,0,100) !!}...</p>
+                        </div>
+                        <div class="menu-price fw-400 main-col">{{ $meal->presentPrice() }}</div>
                      </div>
                   </div>
-                  <div class="text">
-                     <div class="empty-sm-20 empty-xs-20"></div>
-                     <h4 class="h4 caption"><a href="{{ route('shop.meal', $meal->slug) }}" class="link-hover-line">{{ $meal->meal_name }}</a></h4>
-                     <div class="empty-sm-5 empty-xs-5"></div>
-                     <div class="simple-text">
-                        <p><b>Description: </b>{!! substr($meal->meal_description,0,100) !!}...</p>
-                     </div>
-                     <div class="menu-price fw-400 main-col">{{ $meal->presentPrice() }}</div>
-                  </div>
+                  <div class="empty-md-60 empty-sm-30 empty-xs-30"></div>
                </div>
-               <div class="empty-md-60 empty-sm-30 empty-xs-30"></div>
-            </div>
+               @endforeach
+            </div>            
             @endforeach            
          </div>
       </div>      
