@@ -66,7 +66,7 @@ class OrderController extends Controller
 
         $order->guest_id = $guest->id;
         $order->subtotal = Cart::subtotal();
-        $order->vat = Cart::tax();
+        $order->vat = Cart::tax(5, '.', ',');
         $order->total = Cart::total();
         $order->is_fulfilled = false;
 
