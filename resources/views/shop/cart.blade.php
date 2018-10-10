@@ -101,7 +101,7 @@ Your cart
                         <h5 class="tt h5 sm color-2 height-50">Cart Total<span><b class="main-col">N{{ Cart::subtotal() }}</b></span></h5>
                      </li>
                      <li>
-                        <h5 class="tt h5 sm color-2 height-50">VAT:<span><b class="main-col">N{{ Cart::tax() }}</b></span></h5>
+                        <h5 class="tt h5 sm color-2 height-50">VAT:<span><b class="main-col">N{{ Cart::tax(5, '.', ',') }}</b></span></h5>
                      </li>
                      <div class="empty-sm-15 empty-xs-15"></div>
                      <li>
