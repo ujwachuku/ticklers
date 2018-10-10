@@ -140,7 +140,7 @@
                         <div class="simple-text">
                            <p>{!! $upSell->meal_description !!}</p>
                         </div>
-                        <div class="menu-price style-2 main-col">{{ $upSell->presentPrice() }}</div>
+                        <div class="menu-price style-2 main-col" style="right: 18px; font-size: 14px; top: 2px;">{{ $upSell->presentPrice() }}</div>
                      </div>
                   </div>
                </div>
