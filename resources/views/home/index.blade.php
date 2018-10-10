@@ -214,5 +214,5 @@ The best food in Lagos
 @endsection
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBepVW9pGX8fExm1gMnXP7Yi0dVwUhgUUo"></script>	
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASi0wpvmCUgvNzZ3DsHzrDBXr3bX7ajb8"></script>	
 @endsection
