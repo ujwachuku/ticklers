@@ -21,7 +21,7 @@ class Post extends Model
 
     public function save(array $options = [])
     {
-        $this->user_id = auth()->id();
+        $this->author_id = auth()->id();
 
         parent::save();
     }
