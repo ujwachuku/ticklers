@@ -18,5 +18,12 @@ class Post extends Model
     {
     	return $this->belongsTo(Category::class);
     }
-    
+
+    public function save(array $options = [])
+    {
+        $this->user_id = auth()->id();
+
+        parent::save();
+    }
+
 }
