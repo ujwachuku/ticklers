@@ -8,7 +8,7 @@ use TCG\Voyager\Traits\Resizable;
 class Meal extends Model
 {
     use Resizable;
-    
+
     public function getRouteKeyname()
     {
         return 'slug';
@@ -22,6 +22,13 @@ class Meal extends Model
     public function mealCategory()
     {
     	return $this->belongsTo(MealCategory::class, 'meal_category_id');
+    }
+
+    public function save(array $options = [])
+    {
+        $this->user_id = auth()->id();
+
+        parent::save();
     }
 
     public function presentPrice()
