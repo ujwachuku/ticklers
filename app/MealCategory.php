@@ -7,8 +7,7 @@ use TCG\Voyager\Traits\Resizable;
 
 class MealCategory extends Model
 {
-    use Resizable;    
-    
+    use Resizable;
 
     public function user()
     {
@@ -18,5 +17,12 @@ class MealCategory extends Model
     public function meal()
     {
     	return $this->hasMany(Meal::class);
+    }
+
+    public function save(array $options = [])
+    {
+        $this->user_id = auth()->id();
+
+        parent::save();
     }
 }
