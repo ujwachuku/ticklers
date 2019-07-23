@@ -1,11 +1,9 @@
 @extends('layouts.master')
 
-@section('title')
-{{ $post->title }}
-@endsection
+@section('title') {{ $post->title }} @endsection
 
 @section('styles')
-	
+
 @endsection
 
 @section('content')
@@ -214,7 +212,7 @@
                      <div class="simple-text">
                         <p>{!! $post->body !!}</p>
                      </div>
-                     <div class="empty-sm-25 empty-xs-10"></div>                     
+                     <div class="empty-sm-25 empty-xs-10"></div>
                   </div>
                </article>
             </div>
@@ -248,10 +246,10 @@
          </div>
          @endif
       </div>
-   </section>   
-</div>	
+   </section>
+</div>
 @endsection
 
 @section('scripts')
-	
+
 @endsection

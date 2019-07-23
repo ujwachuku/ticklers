@@ -17,16 +17,6 @@ class PostController extends Controller
         return view('posts.index', compact('categories', 'posts'));
     }
 
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->where('status', 'PUBLISHED')->first();
@@ -57,6 +47,6 @@ class PostController extends Controller
 
     public function postsByCategory()
     {
-        
+
     }
 }
