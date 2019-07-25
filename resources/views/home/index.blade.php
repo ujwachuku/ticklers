@@ -1,11 +1,9 @@
 @extends('layouts.master')
 
-@section('title')
-The best food in Lagos
-@endsection
+@section('title') Enjoy your delicious meals in style @endsection
 
 @section('styles')
-	
+
 @endsection
 
 @section('content')
@@ -29,7 +27,7 @@ The best food in Lagos
             </div>
          </div>
          <div class="row">
-            @foreach($categories as $category)            
+            @foreach($categories as $category)
             <div class="col-md-4 col-sm-4 col-xs-12">
                <div class="menu-item menu-item-4">
                   <div class="image hover-zoom">
@@ -46,12 +44,12 @@ The best food in Lagos
                </div>
                <div class="empty-sm-30 empty-xs-30"></div>
             </div>
-            @endforeach            
+            @endforeach
          </div>
-      </div>      
+      </div>
    </section>
    @if(count($meals) >= 6)
-   <section class="section">      
+   <section class="section">
       <div class="empty-lg-130 empty-md-100 empty-sm-60 empty-xs-60"></div>
       <div class="container">
          <div class="row">
@@ -101,10 +99,10 @@ The best food in Lagos
                   <div class="empty-md-60 empty-sm-30 empty-xs-30"></div>
                </div>
                @endforeach
-            </div>            
-            @endforeach            
+            </div>
+            @endforeach
          </div>
-      </div>      
+      </div>
    </section>
    @endif
    @if(count($posts) > 0)
@@ -152,7 +150,7 @@ The best food in Lagos
                </div>
                @endforeach
             </div>
-         </div>         
+         </div>
       </div>
    </section>
    @endif
@@ -192,7 +190,7 @@ The best food in Lagos
                         <ul class="list-style-1 ul-list">
                            <li>
                               <div class="flex-wrap"><span>All week</span><i></i><b>09:00 - 23:00</b></div>
-                           </li>                           
+                           </li>
                         </ul>
                      </div>
                   </div>
@@ -214,5 +212,5 @@ The best food in Lagos
 @endsection
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNOwnBnoZ11MX2jCU_6W-pX4lD0ZJ2QcI"></script>	
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNOwnBnoZ11MX2jCU_6W-pX4lD0ZJ2QcI"></script>
 @endsection

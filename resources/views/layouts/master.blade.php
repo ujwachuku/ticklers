@@ -5,8 +5,8 @@
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
       <meta name="format-detection" content="telephone=no" />
-      <link rel="shortcut icon" href="favicon.ico"/>
-      <title>Ticklers - @yield('title')</title>
+      <link rel="shortcut icon" href="/img/favicon.png"/>
+      <title>Ticklers Food - @yield('title')</title>
       <style id="dynamic-css"></style>
       <style type="text/css">
          .preloader {position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: #fff;text-align: center;z-index: 6001; }
@@ -72,22 +72,22 @@
          </div>
       </div>
       @include('partials.header')
-      
+
       @yield('content')
-      
+
       @include('partials.footer')
-      
+
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
       <link href="/css/style.css" rel="stylesheet" type="text/css"/>
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js"></script>
-      <script src="/js/jquery-ui.min.js"></script>      
+      <script src="/js/jquery-ui.min.js"></script>
       <script src="/js/jscolor.min.js"></script>
       <script src="/js/jquery.knob.js"></script>
-      <script src="/js/jquery.throttle.js"></script>      
+      <script src="/js/jquery.throttle.js"></script>
       <script src="/js/jarallax.js"></script>
       <script src="/js/all.js"></script>
       <script src="/js/color.picker.js"></script>
