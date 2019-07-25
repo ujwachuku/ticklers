@@ -5,7 +5,7 @@
 @endsection
 
 @section('styles')
-	
+
 @endsection
 
 @section('content')
@@ -66,14 +66,14 @@
                               </button>
                            </div>
                            <div class="empty-sm-20 empty-xs-15"></div>
-                        </div>                     
+                        </div>
                      </div>
                      <div class="row">
                         <input type="hidden" name="id" value="{{ $meal->id }}">
                         <input type="hidden" name="name" value="{{ $meal->meal_name }}">
                         <input type="hidden" name="price" value="{{ $meal->price }}">
                         <button class="page-button button-style-1 type-2"><span class="txt">Add to cart</span></button>
-                        <a href="{{ route('shop.index') }}" class="page-button button-style-1 type-2"><span class="txt">back to meals</span></a>                     
+                        <a href="{{ route('shop.index') }}" class="page-button button-style-1 type-2"><span class="txt">back to meals</span></a>
                      </div>
                   </form>
                </aside>
@@ -88,7 +88,7 @@
             <div class="col-md-12 col-xs-12">
                <div class="text-center">
                   <ul class="item-tabs type-2">
-                     <li class="active"><a href="#" class="link-hover-line type-2">Description</a></li>                     
+                     <li class="active"><a href="#" class="link-hover-line type-2">Description</a></li>
                   </ul>
                </div>
                <div class="tab-container-wraps">
@@ -96,63 +96,65 @@
                      <div class="empty-sm-60 empty-xs-30"></div>
                      <div class="simple-text">
                         <p>{!! $meal->meal_description !!}</p>
-                     </div>                     
-                  </div>                  
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <section class="section">
-      <div class="empty-lg-100 empty-md-80 empty-sm-60 empty-xs-50"></div>
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="simple-item color-type-2 text-center">
-                  <h2 class="h2">You Can Also Order</h2>
-                  <div class="empty-sm-10 empty-xs-10"></div>
-                  <div class="col-md-6 col-md-offset-3 col-xs-12">
-                     <div class="simple-text md opacity-1">
-                        <p>Here are some interesting meals that you can also order with the meal above.</p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <div class="row">
+      </div>
+   </section>
+   @if (count($upSells))
+   <section class="section">
+        <div class="empty-lg-100 empty-md-80 empty-sm-60 empty-xs-50"></div>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="simple-item color-type-2 text-center">
+                    <h2 class="h2">You Can Also Order</h2>
+                    <div class="empty-sm-10 empty-xs-10"></div>
+                    <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <div class="simple-text md opacity-1">
+                        <p>Here are some interesting meals that you can also order with the meal above.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="also-order-col-wrapper">
-               @foreach($upSells as $upSell)
-               <div class="col-20">
-                  <div class="empty-sm-60 empty-xs-50"></div>
-                  <div class="menu-item menu-item-6 type-3">
-                     <div class="image">
+                @foreach($upSells as $upSell)
+                <div class="col-20">
+                    <div class="empty-sm-60 empty-xs-50"></div>
+                    <div class="menu-item menu-item-6 type-3">
+                    <div class="image">
                         <img src="{{ Voyager::image($upSell->thumbnail('cropped', 'meal_image')) }}" alt="{{ $upSell->meal_name }}">
                         <div class="vertical-align full menu-button">
-                           <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
-                           <div class="empty-sm-10 empty-xs-10"></div>
-                           <a href="{{ route('shop.meal', $upSell->slug) }}" class="page-button button-style-1 type-4"><span class="txt">details</span></a>
+                            <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
+                            <div class="empty-sm-10 empty-xs-10"></div>
+                            <a href="{{ route('shop.meal', $upSell->slug) }}" class="page-button button-style-1 type-4"><span class="txt">details</span></a>
                         </div>
-                     </div>
-                     <div class="text">
+                    </div>
+                    <div class="text">
                         <div class="empty-sm-20 empty-xs-20"></div>
                         <h5 class="h5 caption"><a href="#" class="link-hover-line">{{ $upSell->meal_name }}</a></h5>
                         <div class="empty-sm-5 empty-xs-5"></div>
                         <div class="simple-text">
-                           <p>{!! $upSell->meal_description !!}</p>
+                            <p>{!! $upSell->meal_description !!}</p>
                         </div>
                         <div class="menu-price style-2 main-col" style="right: 18px; font-size: 14px; top: 2px;">{{ $upSell->presentPrice() }}</div>
-                     </div>
-                  </div>
-               </div>
-               @endforeach
+                    </div>
+                    </div>
+                </div>
+                @endforeach
             </div>
-         </div>
-      </div>
-      <div class="empty-lg-100 empty-md-80 empty-sm-60 empty-xs-50"></div>
-   </section>
+        </div>
+        </div>
+        <div class="empty-lg-100 empty-md-80 empty-sm-60 empty-xs-50"></div>
+    </section>
+   @endif
 </div>
 @endsection
 
 @section('scripts')
-	
+
 @endsection
