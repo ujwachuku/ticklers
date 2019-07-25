@@ -102,6 +102,8 @@
             </div>
          </div>
       </div>
+      <br>
+      <br>
    </section>
    @if (count($upSells))
    <section class="section">
