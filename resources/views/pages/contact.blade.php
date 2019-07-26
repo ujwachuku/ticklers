@@ -5,7 +5,7 @@ Contact us
 @endsection
 
 @section('styles')
-	
+
 @endsection
 
 @section('content')
@@ -45,7 +45,7 @@ Contact us
                   <ul class="list-style-1 ul-list">
                      <li>
                         <div class="flex-wrap"><span>All Week</span><i></i><b>09:00 - 23:00</b></div>
-                     </li>                     
+                     </li>
                   </ul>
                </div>
             </div>
@@ -288,10 +288,10 @@ Contact us
          </div>
       </div>
       <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
-   </section>   
+   </section>
 </div>
 @endsection
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNOwnBnoZ11MX2jCU_6W-pX4lD0ZJ2QcI"></script>	
+<script src="https://maps.googleapis.com/maps/api/js?key={{ config('app.google.map.api') }}"></script>
 @endsection
