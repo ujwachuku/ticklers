@@ -7,6 +7,7 @@ use App\Meal;
 use App\Order;
 use App\OrderCart;
 use App\Post;
+use App\Website;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -14,10 +15,17 @@ class PageController extends Controller
 {
     public function index()
     {
-    	$categoryCount = MealCategory::all()->count();
-    	if ($categoryCount >= 6) 
+        $status = Website::find(1);
+
+        if (!$status->status)
+        {
+            return redirect()->route('coming.soon');
+        }
+
+        $categoryCount = MealCategory::all()->count();
+    	if ($categoryCount >= 6)
     	{
-    		$set = 6;	
+    		$set = 6;
     	}
     	else
     	{
@@ -58,8 +66,13 @@ class PageController extends Controller
             ->join('meals', 'order_carts.meal_id', '=', 'meals.id')
             ->select('orders.*', 'guests.*', 'order_carts.*', 'meals.*')
             ->where('orders.id', $orderFromSession->id)
-            ->get();        
+            ->get();
 
         return view('shop.thanks', compact('cartDetails'));
+    }
+
+    public function comingSoon()
+    {
+        return view('home.coming');
     }
 }

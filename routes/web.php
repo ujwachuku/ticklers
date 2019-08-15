@@ -10,6 +10,7 @@ Route::group(
 });
 
 Route::get('/', 'PageController@index')->name('home.index');
+Route::get('/coming-soon', 'PageController@comingSoon')->name('coming.soon');
 Route::get('about', 'PageController@about')->name('about');
 Route::get('contact', 'PageController@contact')->name('contact');
 Route::get('meals', 'MealController@index')->name('shop.index');
