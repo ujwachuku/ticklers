@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
       <meta name="format-detection" content="telephone=no" />
       <link rel="shortcut icon" href="/img/favicon.png"/>
+      <meta name="yandex-verification" content="5bc2db0ab51a1a3e" />
       <title>Ticklers Food - @yield('title')</title>
       <style id="dynamic-css"></style>
       <style type="text/css">
