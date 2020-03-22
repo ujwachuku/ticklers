@@ -99,7 +99,7 @@ Contact us
                   <h4 class="h4 tt color-type-1">Call us</h4>
                   <div class="empty-sm-20 empty-xs-10"></div>
                   <div class="simple-text contact">
-                     <a href="tel:3805623157851" class="link-hover">+234 806 406 0386</a>
+                     <a href="tel:3805623157851" class="link-hover">+234 9065016383</a>
                   </div>
                </div>
             </div>
